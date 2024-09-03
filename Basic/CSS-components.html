@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Básicos de CSS con Ejemplos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .box {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+            margin: 10px 0;
+        }
+        .mi-clase {
+            background-color: yellow;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        #mi-id {
+            font-size: 20px;
+            color: green;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .box-model {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 20px;
+            background-color: lightgrey;
+        }
+        .relative-position {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            padding: 10px;
+            background-color: #d1e7dd;
+            margin: 10px 0;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .flex-item {
+            background-color: #cfe2ff;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .grid-item {
+            background-color: #e2e3e5;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Componentes Básicos de CSS</h1>
+    <p>Esta página explica los componentes básicos de CSS, con ejemplos prácticos para cada concepto.</p>
+
+    <h2>1. Selectores</h2>
+    <p>Los selectores se utilizan para seleccionar los elementos HTML a los que se aplicarán las reglas de estilo.</p>
+    <div class="example">
+        <p><strong>Ejemplo de un selector de clase:</strong></p>
+        <pre><code>.mi-clase {
+    background-color: yellow;
+}</code></pre>
+        <p class="mi-clase">Este es un ejemplo de un selector de clase.</p>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de un selector de ID:</strong></p>
+        <pre><code>#mi-id {
+    font-size: 20px;
+    color: green;
+}</code></pre>
+        <p id="mi-id">Este es un ejemplo de un selector de ID.</p>
+    </div>
+
+    <h2>2. Propiedades y Valores</h2>
+    <p>Las propiedades en CSS definen qué aspecto de un elemento se va a cambiar, y los valores definen cómo se va a cambiar.</p>
+    <div class="example">
+        <p><strong>Ejemplo de cambiar el color del texto:</strong></p>
+        <pre><code>p {
+    color: green;
+}</code></pre>
+        <p style="color: green;">Este texto es de color verde.</p>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de cambiar el tamaño de la fuente:</strong></p>
+        <pre><code>p {
+    font-size: 20px;
+}</code></pre>
+        <p style="font-size: 20px;">Este texto tiene un tamaño de fuente de 20px.</p>
+    </div>
+
+    <h2>3. Modelo de Caja (Box Model)</h2>
+    <p>El modelo de caja en CSS describe el modelo de diseño que utiliza CSS para ajustar los elementos en la página.</p>
+    <div class="box-model">
+        <p>Este es un ejemplo de un <strong>modelo de caja</strong>.</p>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de CSS para el modelo de caja:</strong></p>
+        <pre><code>div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}</code></pre>
+    </div>
+
+    <h2>4. Posicionamiento</h2>
+    <p>CSS permite controlar cómo se posicionan los elementos en una página web.</p>
+    <div class="relative-position">
+        <p>Este es un ejemplo de <strong>posicionamiento relativo</strong>.</p>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de CSS para posicionamiento relativo:</strong></p>
+        <pre><code>div {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}</code></pre>
+    </div>
+
+    <h2>5. Flexbox</h2>
+    <p>Flexbox es un sistema de diseño en CSS que permite crear diseños flexibles y eficientes.</p>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de Flexbox:</strong></p>
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+    </div>
+
+    <h2>6. Grid</h2>
+    <p>CSS Grid es un sistema de diseño bidimensional que permite crear layouts complejos con filas y columnas.</p>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+    </div>
+    <div class="example">
+        <p><strong>Ejemplo de CSS Grid:</strong></p>
+        <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}</code></pre>
+    </div>
+
+    <h2>7. Media Queries</h2>
+    <p>Las media queries se utilizan para aplicar estilos en función del tamaño de la pantalla u otras características del dispositivo.</p>
+    <div class="example">
+        <p><strong>Ejemplo de una media query:</strong></p>
+        <pre><code>@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</code></pre>
+    </div>
+
+</body>
+</html>
